@@ -17,4 +17,4 @@ Hey there! This is my personal website that I'm currently working on. It's a por
 
 ## How to View
 
-If you want to check it out locally, you can see the page hosted HERE.
+If you want to check it out locally, you can see the page hosted [HERE](https://bruno-albertoni-portfolio.netlify.app/).
