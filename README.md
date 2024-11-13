@@ -13,7 +13,7 @@ Hey there! This is my personal website that I'm currently working on. It's a por
 
 - **HTML5:** I havn't coded in html in a while so I might be a little rusty.
 - **CSS3:** for styling, including Flexbox for layout.
-- **Netfly:** for hosting, 
+- **Netfly:** for hosting, I use Netfly for another project too.
 
 ## How to View
 

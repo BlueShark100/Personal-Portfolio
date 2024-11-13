@@ -3,6 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>
+    document.body.classList.add('js-loading');
+
+    window.addEventListener("load", showPage);
+
+    function showPage() {
+      document.body.classList.remove('js-loading');
+    }
+  </script>
+  <script src="scripts.js"></script>
   
   <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -14,19 +25,18 @@
 <body>
 
   <nav>
-    <div class="logo" title="Doesn't this logo look great?" href="#">
+    <div class="logo" title="Doesn't this logo look great?" href="#" style="opacity: 0%; animation: slide-in-from-right 1s cubic-bezier(0.5, 0, 0.1, 1) 0.4s forwards;">
         <object class="logo-icon" data="Resources/svg/Logo.svg" type="image/svg+xml" width="24" height="24"></object>
     </div>
     <ul>
-      <li><a href="#about" title="He's a good guy ">About</a></li>
-      <li><a href="#projects" title="Guys, I have an idea...">Projects</a></li>
-      <li><a href="#design" title="I just have fun with these">Design</a></li>
-      <li><a href="#contact" class="contact-button" title="Find me on socials!">Contact</a></li>
+      <li><a href="#about" title="He's a good guy" style="opacity: 0%; animation: slide-in-from-left 1s cubic-bezier(0.5, 0, 0.1, 1) 0.7s forwards;">About</a></li>
+      <li><a href="#projects" title="Guys, I have an idea..." style="opacity: 0%; animation: slide-in-from-left 1s cubic-bezier(0.5, 0, 0.1, 1) 0.8s forwards;">Projects</a></li>
+      <li><a href="#design" title="I just have fun with these" style="opacity: 0%; animation: slide-in-from-left 1s cubic-bezier(0.5, 0, 0.1, 1) 0.9s forwards;">Design</a></li>
+      <li><a href="#contact" class="contact-button" title="Find me on socials!" style="opacity: 0%; animation: slide-in-from-left 1s cubic-bezier(0.5, 0, 0.1, 1) 1.0s forwards;">Contact</a></li>
     </ul>
   </nav>
 
   <div class="container">
-
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-content">
