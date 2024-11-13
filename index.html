@@ -4,15 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <script>
-    document.body.classList.add('js-loading');
-
-    window.addEventListener("load", function() {
-      // Remove 'js-loading' and add 'page-loaded' class after the page has fully loaded
-      document.body.classList.remove('js-loading');
-      document.body.classList.add('page-loaded');
-    });
-  </script>
   <script src="scripts.js"></script>
   
   <link rel="stylesheet" type="text/css" href="style.css">
@@ -38,7 +29,7 @@
 
   <div class="container">
     <!-- Hero Section -->
-    <section class="hero">
+    <section id="about" class="hero">
       <div class="hero-background">
         <img src="Resources/Images/Drawings-Collage.png">
       </div>
@@ -77,12 +68,47 @@
       </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <h3>Contact Me</h3>
+      <div class="projects">
+        <!-- Project Card 1 -->
+        <a href="#" class="contact-card">
+          <h4>Instagram</h4>
+          <p>aliquip sunt adipisicing officia id quis ut consectetur eu esse aliqua laboris reprehenderit aliqua</p>
+        </a>
+
+        <!-- Project Card 2 -->
+        <a href="#" class="contact-card">
+          <h4>Github</h4>
+          <p>dolor nulla et nostrud cupidatat eu esse elit veniam enim veniam reprehenderit exercitation ea</p>
+        </a>
+
+        <!-- Project Card 3 -->
+        <a href="#" class="contact-card">
+          <h4>Laser Shows</h4>
+          <p>laborum dolor do tempor officia exercitation fugiat aliqua reprehenderit veniam laboris labore deserunt ea</p>
+        </a>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer>
       <p>&copy; 2024 Bruno Albertoni. All rights reserved. | <a href="#contact">Contact</a></p>
     </footer>
 
   </div>
+  <script>
+    window.onload = function() {
+      console.log("Hello")
+    }
+    document.body.classList.add('js-loading');
 
+    window.addEventListener("load", function() {
+      // Remove 'js-loading' and add 'page-loaded' class after the page has fully loaded
+      document.body.classList.remove('js-loading');
+      document.body.classList.add('page-loaded');
+    });
+  </script>
 </body>
 </html>
