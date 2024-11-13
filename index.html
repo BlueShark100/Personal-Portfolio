@@ -7,11 +7,11 @@
   <script>
     document.body.classList.add('js-loading');
 
-    window.addEventListener("load", showPage);
-
-    function showPage() {
+    window.addEventListener("load", function() {
+      // Remove 'js-loading' and add 'page-loaded' class after the page has fully loaded
       document.body.classList.remove('js-loading');
-    }
+      document.body.classList.add('page-loaded');
+    });
   </script>
   <script src="scripts.js"></script>
   
@@ -59,8 +59,8 @@
       <div class="projects">
         <!-- Project Card 1 -->
         <a href="#" class="project-card">
-          <h4>Project One</h4>
-          <p>A unique project that blends creativity and technical skills, using HTML, CSS, and JavaScript.</p>
+          <h4>This Website!</h4>
+          <p>I'm working to complete this website itself. Add more content, more pages, animations, etc.</p>
         </a>
 
         <!-- Project Card 2 -->
@@ -71,8 +71,8 @@
 
         <!-- Project Card 3 -->
         <a href="#" class="project-card">
-          <h4>Project Three</h4>
-          <p>An engineering project focused on creating an IoT solution with sensors and wireless communication.</p>
+          <h4>Laser Shows</h4>
+          <p>I make laser shows and play them in my basement. It's a lot of fun I promise. I'll post videos on my instagram account</p>
         </a>
       </div>
     </section>

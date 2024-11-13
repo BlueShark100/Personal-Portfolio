@@ -19,6 +19,11 @@
   animation-play-state: paused !important;
 }
 
+/* After the page is loaded, trigger animations */
+.page-loaded * {
+  animation-play-state: running !important;
+}
+
 /* Reset */
 * {
   margin: 0;
