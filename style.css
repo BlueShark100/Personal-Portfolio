@@ -270,7 +270,7 @@ nav ul li a.contact-button:hover {
 }
 
 .hero-text h1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: Verdana, sans-serif;
   font-weight: 700; 
   font-size: 3rem;
   font-weight: 700;
@@ -288,14 +288,14 @@ nav ul li a.contact-button:hover {
   left: -1rem;
   right: -0.5rem;
   bottom: -0.5rem;
-  background-color: rgba(0, 0, 0, 0.3); /* Adjustable dark background */
+  background-color: rgba(0, 0, 0, 0.5); /* Adjustable dark background */
   z-index: -1; /* Place it behind the text */
   border-radius: 4px; /* Optional */
   filter: blur(40px);
 }
 
 .hero-text p {
-  font-family: 'Poppins', sans-serif;
+  font-family: Verdana, sans-serif;
   font-weight: 500; 
   font-size: 1.2rem;
   color: var(--secondary-color); /* Secondary color for subtler text */
@@ -310,7 +310,7 @@ nav ul li a.contact-button:hover {
   left: -1rem;
   right: -0.5rem;
   bottom: -0.5rem;
-  background-color: rgba(0, 0, 0, 0.3); /* Adjustable dark background */
+  background-color: rgba(0, 0, 0, 0.5); /* Adjustable dark background */
   z-index: -1; /* Place it behind the text */
   border-radius: 4px; /* Optional */
   filter: blur(40px);
@@ -364,7 +364,7 @@ nav ul li a.contact-button:hover {
 
 /* Section styling */
 .section {
-  margin: 0rem 0;
+  margin: 2rem 0;
 }
 
 .section h3 {
@@ -376,6 +376,8 @@ nav ul li a.contact-button:hover {
 
 /* Project cards styling */
 .projects {
+  width: 100%;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
@@ -412,6 +414,8 @@ nav ul li a.contact-button:hover {
 
 /* Contact cards styling */
 .contact {
+  width: 100%;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
@@ -486,7 +490,7 @@ footer a:hover {
   .hero-text p {
     flex: 1 1 60%;
     font-size: 1.3rem; /* Adjust paragraph size for readability on mobile */
-    font-weight: bold;
+    font-weight: 600;
     max-width: 100%; /* Allow paragraph to take full width */
   }
 
@@ -559,6 +563,10 @@ footer a:hover {
 
 /* For even smaller screens, adjust further */
 @media (max-width: 600px) {
+  .hero {
+    padding: 3rem 0;
+  }
+  
   .hero-content {
     flex-direction: column; /* Ensure stacking vertically on the smallest screens */
     text-align: center; /* Center the text */
@@ -573,6 +581,7 @@ footer a:hover {
     flex: 0 1 100%; /* Image takes full width */
     margin-top: 1.5rem; /* Add space between the text and image */
     width: 300px;
+    justify-content: center;
   }
 
   .hero-image::before {
