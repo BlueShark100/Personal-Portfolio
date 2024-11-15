@@ -254,6 +254,7 @@ nav ul li a.contact-button:hover {
   min-height: 100%;
   filter: invert(100%) hue-rotate(180deg) brightness(60%);
   object-fit:cover;
+  z-index:-2;
 }
 
 .hero-content {
@@ -277,8 +278,6 @@ nav ul li a.contact-button:hover {
   line-height: 1.3;
   color: var(--text-color); /* Assuming you have a variable for text color */
   margin-bottom: 1rem;
-  opacity: 0%;
-  animation: float-in 1s cubic-bezier(0.5, 0, 0.1, 1) 0s forwards;
 }
 
 .hero-text h1::before {
@@ -300,9 +299,8 @@ nav ul li a.contact-button:hover {
   font-size: 1.2rem;
   color: var(--secondary-color); /* Secondary color for subtler text */
   max-width: 600px; /* Limit width for better readability */
-  opacity: 0%;
-  animation: float-in 1s cubic-bezier(0.5, 0, 0.1, 1) 0.2s forwards;
 }
+
 .hero-text p::before {
   content: '';
   position: absolute;
@@ -321,8 +319,6 @@ nav ul li a.contact-button:hover {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  opacity: 0%;
-  animation: float-in 1s cubic-bezier(0.5, 0, 0.1, 1) 0.4s forwards;
   width: 18vw;
 }
 
@@ -362,8 +358,19 @@ nav ul li a.contact-button:hover {
   }
 }
 
+@keyframes fade-in {
+  0% {
+    filter: blur(8px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* Section styling */
 .section {
+  width:100%;
   margin: 2rem 0;
 }
 
@@ -417,7 +424,7 @@ nav ul li a.contact-button:hover {
   width: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
   gap: 2rem;
 }
 
@@ -430,8 +437,12 @@ nav ul li a.contact-button:hover {
   transition: transform 0.3s ease, color 1s ease;
   color: var(--text-color);
   text-decoration: none;
+
   display: flex;
-  flex-direction: column;
+  align-items: center;      
+  justify-content: center;  
+  flex-direction: row;   
+  text-align: center;       
   gap: 0.5rem;
 }
 
@@ -440,14 +451,10 @@ nav ul li a.contact-button:hover {
   color: var(--text-color); /* this won't chagne the text color but if I want to change it I can */
 }
 
-.contact-card h4 {
-  font-size: 1.4rem;
-  font-weight: 600;
-}
-
 .contact-card p {
   color: var(--secondary-color);
   font-size: 1rem;
+  align-content: center;
 }
 
 /* Footer styling */
