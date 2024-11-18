@@ -94,7 +94,6 @@ nav {
   position: fixed;
   top: 1rem;
   z-index: 1000;   /* Ensures the navbar stays on top of other elements */
-  width: 0%;
   max-width: 70rem;
   display: flex;
   justify-content: space-between;
@@ -118,13 +117,25 @@ nav {
 
 nav .logo {
   position: relative;
-  color: rgba(255, 255, 255, 0.4);
-  font-size: 0rem;
-  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  align-items: center;      
+  justify-content: center;  
+  flex-direction: row;   
+  text-align: center;  
+
   transition: 0.3s ease;
   border-radius: 6px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  height: 1rem;
+}
+
+nav .logo p {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1.5rem;
+  font-family: 'Doto';
+  font-weight: 600;
+  cursor: default;
 }
 
 nav .logo-icon {
@@ -157,6 +168,8 @@ nav ul li a {
   color: var(--text-color);
   text-decoration: none;
   font-size: 1rem;
+  font-family: 'Doto';
+  font-weight: 600;
   transition: box-shadow 0.4s ease;
   padding: 0.6rem 0.9rem; /* Vertical Horizontal*/
   border-radius: 10px;
@@ -175,7 +188,7 @@ nav ul li a.contact-button {
   color: var(--background-color);
   padding: 0.5rem 0.7rem; /* Vertical Horizontal*/
   border-radius: 10px;
-  font-size: 1rem;
+  font-weight: 800;
   cursor: pointer;
   border: none;
   text-decoration: none;
@@ -375,8 +388,9 @@ nav ul li a.contact-button:hover {
 }
 
 .section h3 {
+  font-family: 'Chakra Petch';
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: 800;
   margin-bottom: 1.5rem;
   text-align: center;
 }
@@ -410,8 +424,9 @@ nav ul li a.contact-button:hover {
 }
 
 .project-card h4 {
+  font-family: 'Chakra Petch';
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 1000;
 }
 
 .project-card p {
@@ -424,7 +439,7 @@ nav ul li a.contact-button:hover {
   width: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
   gap: 2rem;
 }
 
@@ -437,7 +452,7 @@ nav ul li a.contact-button:hover {
   transition: transform 0.3s ease, color 1s ease;
   color: var(--text-color);
   text-decoration: none;
-
+  /* gotta align everything in the center */
   display: flex;
   align-items: center;      
   justify-content: center;  
@@ -454,6 +469,8 @@ nav ul li a.contact-button:hover {
 .contact-card p {
   color: var(--secondary-color);
   font-size: 1rem;
+  font-family: 'Doto';
+  font-weight: 600;
   align-content: center;
 }
 
@@ -539,10 +556,6 @@ footer a:hover {
     gap: 0rem; /* Increase space between links */
   }
 
-  nav .logo-icon {
-    margin-right: 0rem;
-  }
-
   nav ul li a {
     font-size: 1rem; /* Make the links smaller for mobile */
   }
@@ -609,15 +622,20 @@ footer a:hover {
     width: 100%; /* Make the navbar take full width */
   }
 
+  nav .logo p {
+    font-size: 0rem;
+  }
+
   nav .logo-icon {
     width: 20px; /* Adjust icon size */
     height: 20px; /* Adjust icon size */
+    margin-right: 0.3rem;
   }
 
   /* Adjust the navigation items */
   nav ul li a {
     font-size: 0.9rem; /* Smaller font size for links */
-    padding: 0.4rem 0.6rem; /* Reduced padding around links */
+    padding: 0.4rem 0.4rem; /* Reduced padding around links */
   }
 
   /* Reduce the size of the contact button */
