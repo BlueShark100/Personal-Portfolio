@@ -1,246 +1,3 @@
-/* CSS Variables for colors and styles */
-:root {
-    --background-color: #0e0e10;
-    --text-color: #ffffff;
-    --secondary-color: #b0b0b0;
-    --accent-color: #5bc3ff;
-    --accent-hover: #fffffff3;
-    --menu-button-bg: rgba(255, 255, 255, 0.1);
-    --menu-button-hover-bg: rgba(255, 255, 255, 0.2);
-    --glass-bg: rgba(255, 255, 255, 0.08);
-    --dark-glass-bg: rgba(0, 0, 0, 0.475);
-    --glass-border: rgba(255, 255, 255, 0.2);
-  }
-
-/* This is important so that everything loads before the animations play */
-.js-loading *,
-.js-loading *:before,
-.js-loading *:after {
-  animation-play-state: paused !important;
-}
-
-/* After the page is loaded, trigger animations */
-.page-loaded * {
-  animation-play-state: running !important;
-}
-
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  background-color: #040404;
-}
-
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #121212; 
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #2e2e2e; 
-  border-radius: 10px;
-  transition: 1s ease;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #3f3f3f; 
-}
-
-/* Full-page Background */
-body {
-  background: repeating-linear-gradient(
-    30deg,
-    rgb(0, 0, 0),
-    hsl(240, 4%, 10%) 20rem,
-    hsl(210, 14%, 3%) 40rem,
-    hsl(210, 8%, 5%) 60rem,
-    rgb(0, 0, 0) 80rem
-  );
-  background-repeat: repeat-y;
-  font-family: Arial, sans-serif;
-  color: var(--text-color);
-  padding: 0;
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Container for content */
-.container {
-  max-width: 1000px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Navigation bar styling */
-nav {
-  position: fixed;
-  top: 1rem;
-  z-index: 1000;   /* Ensures the navbar stays on top of other elements */
-  max-width: 70rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.7rem;
-  padding-right: 0.4rem;
-  border-radius: 15px;
-  border: 1px solid var(--glass-border);
-  background-color: var(--dark-glass-bg);
-  backdrop-filter: blur(12px);
-  opacity: 0%;
-  animation: slide-open 1s cubic-bezier(0.5, 0, 0.1, 1) 0s forwards;
-}
-
-@keyframes slide-open {
-  to {
-    width: 96%;
-    opacity: 100%;
-  }
-}
-
-nav .logo {
-  position: relative;
-  display: flex;
-  align-items: center;      
-  justify-content: center;  
-  flex-direction: row;   
-  text-align: center;  
-
-  transition: 0.3s ease;
-  border-radius: 6px;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  height: 1rem;
-}
-
-nav .logo p {
-  color: rgba(255, 255, 255, 0.4);
-  font-size: 1.5rem;
-  font-family: 'Doto';
-  font-weight: 600;
-  cursor: default;
-}
-
-nav .logo-icon {
-  position: realtive; /* Makes it easier to center it */
-  scale: 190%;
-  /* transform: translateY(10%); Adjusts to the center because for some reason it wouldnt be centered with it */
-  left: 0%;
-  color: var(--text-color);
-  transition: 0.3s ease;
-  border-radius: 6px;
-  filter: invert(100%);
-  margin-left: 5px;
-  margin-right: 1.7rem;
-}
-
-/*
-nav .logo:hover {
-    background-color: rgba(255, 255, 255, 0.01);
-    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.05); 
-}
-*/
-
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 0.2rem;
-}
-
-nav ul li a {
-  color: var(--text-color);
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: 'Doto';
-  font-weight: 600;
-  transition: box-shadow 0.4s ease;
-  padding: 0.6rem 0.9rem; /* Vertical Horizontal*/
-  border-radius: 10px;
-  box-shadow: inset 0 0 10 0px rgba(255, 255, 255, 0.05);
-}
-
-nav ul li a:hover {
-  color: var(--text-color);
-  background-color: rgba(255, 255, 255, 0.029);
-  /* inset | offset-x | offset-y | blur-radius | spread-radius | color */
-  box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.05); 
-}
-
-nav ul li a.contact-button {
-  background-color: var(--text-color);
-  color: var(--background-color);
-  padding: 0.5rem 0.7rem; /* Vertical Horizontal*/
-  border-radius: 10px;
-  font-weight: 800;
-  cursor: pointer;
-  border: none;
-  text-decoration: none;
-  transition: box-shadow 0.3s ease;
-  margin-left: 0.7rem;
-}
-
-nav ul li a.contact-button:hover {
-  /* background-color: var(--accent-hover); */
-  box-shadow: inset 0 0 0 3px rgba(0, 0, 0, 0.153);
-}
-
-@keyframes slide-in-from-right {
-  from {
-    opacity: 0%;
-    transform: translateX(20px);
-  }
-  to {
-    opacity: 100%;
-    transform: translateX(0px);
-  }
-}
-
-@keyframes slide-in-from-left {
-  from {
-    opacity: 0%;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 100%;
-    transform: translateX(0px);
-  }
-}
-
-.button {
-  background-color: var(--menu-button-bg);
-  color: var(--text-color);
-  padding: 0.5rem 0.7rem; /* Vertical Horizontal*/
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  border: none;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-.button:hover {
-  background-color: var(--menu-button-hover-bg);
-  color: var(--text-color);
-}
-
-
 /* Hero Section Styling */
 .hero {
   display: flex;
@@ -359,18 +116,6 @@ nav ul li a.contact-button:hover {
   z-index: -1; /* Place the duplicate behind the original image */
 }
 
-@keyframes float-in {
-  0% {
-    filter: blur(8px);
-    opacity: 0;
-    transform: translateY(20px); /* Start with text below */
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0); /* End in place */
-  }
-}
-
 @keyframes fade-in {
   0% {
     filter: blur(8px);
@@ -474,24 +219,6 @@ nav ul li a.contact-button:hover {
   align-content: center;
 }
 
-/* Footer styling */
-footer {
-  text-align: center;
-  padding: 2rem 0;
-  color: var(--secondary-color);
-  font-size: 0.9rem;
-}
-
-footer a {
-  color: var(--accent-color);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-footer a:hover {
-  color: var(--accent-hover);
-}
-
 
 /* Adjust for mobile viewing too */
 @media (min-width: 1170px) {
@@ -542,24 +269,6 @@ footer a:hover {
     object-fit: cover;
   }
 
-  /* Navigation Bar - Reduce padding and adjust layout for smaller screens */
-  nav {
-    top: 1%;
-    padding: 0.6rem; /* Reduce padding */
-    padding-right: 0.3rem;
-    width: 97%; /* Make the navbar take almost full width */
-    max-width: none; /* Allow it to be full width on small screens */
-  }
-
-  nav ul {
-    align-items: center; /* Center the links */
-    gap: 0rem; /* Increase space between links */
-  }
-
-  nav ul li a {
-    font-size: 1rem; /* Make the links smaller for mobile */
-  }
-
   /* Project Cards - Adjust the grid layout for mobile */
   .projects {
     grid-template-columns: 1fr; /* Stack project cards vertically on mobile */
@@ -569,15 +278,6 @@ footer a:hover {
   /* Section Styling - Adjust the margin for sections on smaller screens */
   .projects-section {
     margin: 2rem 0; /* Add some space between sections */
-  }
-  
-  /* Footer - Adjust font size for mobile */
-  footer p {
-    font-size: 0.8rem;
-  }
-
-  footer a {
-    font-size: 0.9rem;
   }
 }
 
@@ -614,33 +314,5 @@ footer a:hover {
     object-fit: cover;
     border-radius: 20px; /* Keep border-radius for rounded image corners */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow for the image */
-  }
-
-  /* Reduce the padding of the navbar */
-  nav {
-    padding: 0.5rem; /* Reduce padding */
-    width: 100%; /* Make the navbar take full width */
-  }
-
-  nav .logo p {
-    font-size: 0rem;
-  }
-
-  nav .logo-icon {
-    width: 20px; /* Adjust icon size */
-    height: 20px; /* Adjust icon size */
-    margin-right: 0.3rem;
-  }
-
-  /* Adjust the navigation items */
-  nav ul li a {
-    font-size: 0.9rem; /* Smaller font size for links */
-    padding: 0.4rem 0.4rem; /* Reduced padding around links */
-  }
-
-  /* Reduce the size of the contact button */
-  nav ul li a.contact-button {
-    padding: 0.4rem 0.6rem; /* Smaller padding */
-    font-size: 0.9rem; /* Smaller text size */
   }
 }
