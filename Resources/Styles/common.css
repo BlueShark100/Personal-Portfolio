@@ -12,16 +12,8 @@
     --glass-border: rgba(255, 255, 255, 0.2);
   }
 
-/* This is important so that everything loads before the animations play */
-.js-loading *,
-.js-loading *:before,
-.js-loading *:after {
+* {
   animation-play-state: paused !important;
-}
-
-/* After the page is loaded, trigger animations */
-.page-loaded * {
-  animation-play-state: running !important;
 }
 
 /* Reset */
@@ -129,9 +121,6 @@ nav .logo {
   border-radius: 6px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  height: 1rem;
-
-  cursor: default;
 }
 
 nav .logo p {
@@ -140,6 +129,12 @@ nav .logo p {
   font-family: 'Doto';
   font-weight: 600;
   text-decoration: none;
+}
+
+nav .logo-container {
+  position: relative; /* Enables positioning of the anchor on top */
+  display: inline-block; /* Ensures it wraps around the SVG */
+  height: 24px; /* Matches the height of the SVG */
 }
 
 nav .logo-icon {
@@ -153,6 +148,19 @@ nav .logo-icon {
   filter: invert(100%);
   margin-left: 5px;
   margin-right: 1.7rem;
+
+  z-index: 10;
+}
+
+nav .icon-click {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Covers the entire SVG */
+  height: 100%; /* Covers the entire SVG */
+  z-index: 10;
+  cursor: pointer;
+  background: transparent; /* Invisible but clickable */
 }
 
 /*

@@ -8,17 +8,30 @@
   <script src="scripts.js"></script>
   
   <link rel="stylesheet" type="text/css" href="../Resources/Styles/common.css">
+  <link rel="stylesheet" id="loading-icon" type="text/css" href="../Resources/Styles/loader.css">
   <link rel="stylesheet" type="text/css" href="projects.css">
+  <style id="pause-animations-style">
+    /* Pause all animations by default */
+    body * {
+      animation-play-state: paused !important;
+    }
+  </style>
 
   <link rel="icon" type="image/x-icon" href="../Resources/Images/Favicon.png">
   <title>Bruno Albertoni - Projects</title>
 </head>
+
+<div class="loader" id="loader"></div>
+
 <body>
 
   <nav>
     <div class="logo" title="Doesn't this logo look great?" href="../index.html" style="opacity: 0%; animation: slide-in-from-right 1s cubic-bezier(0.5, 0, 0.1, 1) 0.4s forwards;">
+      <div class="logo-container" title="Go back home">
         <object class="logo-icon" data="../Resources/svg/Logo.svg" type="image/svg+xml" width="24" height="24"></object>
-        <p>Projects</p>
+        <a href="../index.html" class="icon-click"></a>
+      </div>
+      <p title="this is your current page">Projects</p>
     </div>
     <ul>
       <li><a href="../About/about.html" title="Go back to the home page" style="opacity: 0%; animation: slide-in-from-left 1s cubic-bezier(0.5, 0, 0.1, 1) 0.7s forwards;">About</a></li>
@@ -42,12 +55,12 @@
 
   </div>
   <script>
-    document.body.classList.add('js-loading');
-
     window.addEventListener("load", function() {
-      // Remove 'js-loading' and add 'page-loaded' class after the page has fully loaded
-      document.body.classList.remove('js-loading');
-      document.body.classList.add('page-loaded');
+      const styleTag = document.getElementById("pause-animations-style");
+      if (styleTag) styleTag.innerHTML = '* {animation-play-state: running !important;}';
+
+      const loadingIcon = document.getElementById("loader");
+      if (styleTag) loadingIcon.style.opacity = 0;
     });
   </script>
 </body>
