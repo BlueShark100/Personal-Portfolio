@@ -93,7 +93,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0.7rem;
-  padding-right: 0.4rem;
   border-radius: 15px;
   border: 1px solid var(--glass-border);
   background-color: var(--dark-glass-bg);
@@ -119,7 +118,7 @@ nav .logo {
 
   transition: 0.3s ease;
   border-radius: 6px;
-  padding-left: 0.5rem;
+  padding-left: 0.7rem;
   padding-right: 0.5rem;
 }
 
@@ -315,7 +314,6 @@ footer a:hover {
   nav {
     top: 1%;
     padding: 0.6rem; /* Reduce padding */
-    padding-right: 0.3rem;
     width: 97%; /* Make the navbar take almost full width */
     max-width: none; /* Allow it to be full width on small screens */
   }

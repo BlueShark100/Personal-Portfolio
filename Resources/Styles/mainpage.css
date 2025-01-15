@@ -161,6 +161,13 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+
+  /* background-image: url('Resources/Images/Projects_Background.png'); /* Replace with your image path */
+  background-size: cover; /* Scale the image to cover the card */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  backdrop-filter: brightness(0.5);
+  background-blend-mode: screen; /* Use screen blend mode for the desired effect */
 }
 
 .project-card:hover {
@@ -172,6 +179,19 @@
   font-family: 'Chakra Petch';
   font-size: 1.4rem;
   font-weight: 1000;
+}
+
+.project-card h4::before {
+  content: '';
+  position: absolute;
+  top: -0.5rem;
+  left: -1rem;
+  right: -0.5rem;
+  bottom: -0.5rem;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjustable dark background */
+  z-index: -1; /* Place it behind the text */
+  border-radius: 4px; /* Optional */
+  filter: blur(40px);
 }
 
 .project-card p {
