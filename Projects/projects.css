@@ -24,7 +24,6 @@
     filter: invert(100%);
     object-fit:cover;
     z-index:-2;
-    background-color: red;
 }
   
 .hero-content {
