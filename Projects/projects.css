@@ -1,6 +1,95 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 0;
+    width: 100%;
+}
+  
+.hero-background {
+    position: absolute;
+    opacity: 100%;
+    top: -80px;
+    height: 900px;
+    overflow: hidden;
+    mix-blend-mode: screen;
+    width: 100%;
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%); /* For Safari */
+}
+  
+.hero-background video {
+    max-width: 100%;
+    min-height: 100%;
+    filter: invert(100%);
+    object-fit:cover;
+    z-index:-2;
+    background-color: red;
+}
+  
+.hero-content {
+    display: flex;
+    align-items: center;
+    max-width: 1000px; /* Adjust based on your preference */
+    margin: auto;
+    gap: 2rem; /* Space between text and image */
+}
+
+.hero-spacer {
+    width: 30%;
+}
+  
+.hero-text {
+    flex: 1;
+    text-align: left;
+}
+  
+.hero-text h1 {
+    font-family: Verdana, sans-serif;
+    font-weight: 700; 
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--text-color); /* Assuming you have a variable for text color */
+    margin-bottom: 1rem;
+}
+  
+.hero-text h1::before {
+    content: '';
+    position: absolute;
+    top: -0.5rem;
+    left: -1rem;
+    right: -0.5rem;
+    bottom: -0.5rem;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjustable dark background */
+    z-index: -1; /* Place it behind the text */
+    border-radius: 4px; /* Optional */
+    filter: blur(40px);
+}
+  
+.hero-text p {
+    font-family: Verdana, sans-serif;
+    font-weight: 500; 
+    font-size: 1.2rem;
+    color: var(--secondary-color); /* Secondary color for subtler text */
+    max-width: 600px; /* Limit width for better readability */
+}
+  
+.hero-text p::before {
+    content: '';
+    position: absolute;
+    top: -0.5rem;
+    left: -1rem;
+    right: -0.5rem;
+    bottom: -0.5rem;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjustable dark background */
+    z-index: -1; /* Place it behind the text */
+    border-radius: 4px; /* Optional */
+    filter: blur(40px);
+}
+
 .construct {
     margin-top: 5rem;
-    display: flex;
     flex-direction: column;
     height: calc(100vh - 15rem);
     justify-content: center;
@@ -22,4 +111,68 @@
     font-size: 1.2rem;
     color: var(--secondary-color); /* Secondary color for subtler text */
     max-width: 600px; /* Limit width for better readability */
+}
+
+.projects {
+    margin-top: 5rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    flex-direction: column;
+    /* height: calc(100vh - 15rem); */
+    justify-content: center;
+}
+
+.projects a {
+    display: block;
+}
+
+.project-card {
+    background-color: var(--glass-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease, color 1s ease;
+    color: var(--text-color);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    /* background-image: url('Resources/Images/Projects_Background.png'); /* Replace with your image path */
+    background-size: cover; /* Scale the image to cover the card */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    backdrop-filter: brightness(0.5);
+    background-blend-mode: screen; /* Use screen blend mode for the desired effect */
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    color: var(--text-color); /* this won't chagne the text color but if I want to change it I can */
+}
+
+.project-card h4 {
+    font-family: 'Chakra Petch';
+    font-size: 1.4rem;
+    font-weight: 1000;
+}
+
+.project-card h4::before {
+    content: '';
+    position: absolute;
+    top: -0.5rem;
+    left: -1rem;
+    right: -0.5rem;
+    bottom: -0.5rem;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjustable dark background */
+    z-index: -1; /* Place it behind the text */
+    border-radius: 4px; /* Optional */
+    filter: blur(40px);
+}
+
+.project-card p {
+    color: var(--secondary-color);
+    font-size: 1rem;
 }

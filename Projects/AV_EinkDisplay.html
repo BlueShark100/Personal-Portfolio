@@ -18,7 +18,7 @@
   </style>
 
   <link rel="icon" type="image/x-icon" href="../Resources/Images/Favicon.png">
-  <title>Bruno Albertoni - Projects</title>
+  <title>Bruno Albertoni - AV Display</title>
 </head>
 
 <div class="loader" id="loader">
@@ -41,11 +41,11 @@
         <object class="logo-icon" data="../Resources/svg/Logo.svg" type="image/svg+xml" width="24" height="24"></object>
         <a href="../index.html" class="icon-click"></a>
       </div>
-      <p title="this is your current page">Projects</p>
+      <p title="this is your current page">AV Display</p>
     </div>
     <ul>
       <li><a href="../About/about.html" title="Go back to the home page" style="opacity: 0%; animation: slide-in-from-left 1s cubic-bezier(0.5, 0, 0.1, 1) 0.7s forwards;">About</a></li>
-      <li><a href="../index.html" title="Go back home" style="opacity: 0%; animation: slide-in-from-left 1s cubic-bezier(0.5, 0, 0.1, 1) 0.8s forwards;">Home</a></li>
+      <li><a href="projects.html" title="Go back home" style="opacity: 0%; animation: slide-in-from-left 1s cubic-bezier(0.5, 0, 0.1, 1) 0.8s forwards;">Projects</a></li>
       <li><a href="../Designs/designs.html" title="I just have fun with these" style="opacity: 0%; animation: slide-in-from-left 1s cubic-bezier(0.5, 0, 0.1, 1) 0.9s forwards;">Design</a></li>
       <li><a href="../index.html#contact" class="contact-button" title="Find me on socials!" style="opacity: 0%; animation: slide-in-from-left 1s cubic-bezier(0.5, 0, 0.1, 1) 1.0s forwards;">Contact</a></li>
     </ul>
@@ -53,26 +53,29 @@
 
   <div class="container">
 
-    <section class="projects" style="opacity: 0%; animation: float-in 1s cubic-bezier(0.5, 0, 0.1, 1) 0s forwards;">
-      <a class="project-card" href="AV_EinkDisplay.html">
-        <h4>E-ink Avlanche Forecast Display</h4>
-        <p>A beutiful, minimal, and customisable e-ink display that shows you the avalanche forcast in colorado.</p>
-      </a>
+    <section class="hero">
+      <div class="hero-background">
+        <video class="video" id="myVideo" autoplay muted>
+          <source src="../Resources/Videos/AV_display_hero.mp4" type="video/mp4">
+          <source src="../Resources/Videos/AV_display_hero.mov" type="video/mov">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="hero-content">
+        <div class="hero-spacer">
+          <!-- This is just to space out the text on the right side-->
+           <p></p>
+        </div>
+        <div class="hero-text">
+          <h1 style="opacity: 0%; animation: float-in 1s cubic-bezier(0.5, 0, 0.1, 1) 0s forwards; padding-top: 170px">E-Ink Avalanche Forcast Display</h1>
+          <p style="opacity: 0%; animation: float-in 1s cubic-bezier(0.5, 0, 0.1, 1) 0.2s forwards;">A smart picture frame with avalanhce foracst information from the CAIC so you're always in the know when it comes in Colorado's backcountry</p>
+        </div>
+      </div>
+    </section>
 
-      <a class="project-card">
-        <h4>Empty for now</h4>
-        <p>I'll fill these wil projects I've already built in the future</p>
-      </a>
-
-      <a class="project-card">
-        <h4>Empty for now</h4>
-        <p>You can check out my github to see a few projects there</p>
-      </a>
-
-      <a class="project-card">
-        <h4>Empty for now</h4>
-        <p>it had to be 2x2 I couldn't leave a slot weirdly empty here</p>
-      </a>
+    <section class="construct" style="opacity: 0%; animation: float-in 1s cubic-bezier(0.5, 0, 0.1, 1) 0.6s forwards;">
+      <h1>Currently in the making</h1>
+      <p>More frequent updates will be on my snapchat story and possibly my instagram story<br><br>I'm planning to right some code to make the whole thing more usable in day-to-day use. The setup is still not the easiest but it's ok since I should at some point make a doc that explains all the steps</p>
     </section>
 
     <!-- Footer -->
