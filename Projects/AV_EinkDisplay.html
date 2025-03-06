@@ -56,7 +56,7 @@
 
     <section class="hero">
       <div class="hero-background">
-        <video class="video" id="myVideo" autoplay muted>
+        <video class="video" id="myVideo" autoplay muted playsinline>
           <source src="../Resources/Videos/AV_display_hero.mp4" type="video/mp4">
           <source src="../Resources/Videos/AV_display_hero.mov" type="video/mov">
           Your browser does not support the video tag.
@@ -67,15 +67,37 @@
           <!-- This is just to space out the text to the right side-->
         </div>
         <div class="hero-text">
-          <h1 style="opacity: 0%; animation: float-in 1s cubic-bezier(0.5, 0, 0.1, 1) 0s forwards; padding-top: 170px">E-Ink Avalanche Forcast Display</h1>
-          <p style="opacity: 0%; animation: float-in 1s cubic-bezier(0.5, 0, 0.1, 1) 0.2s forwards;">A smart picture frame with avalanhce foracst information from the CAIC so you're always in the know when it comes to Colorado's backcountry</p>
+          <h1 style="opacity: 0%; animation: float-in 1s cubic-bezier(0.5, 0, 0.1, 1) 0s forwards; padding-top: 170px">E-Ink Avalanche Forecast Display</h1>
+          <p style="opacity: 0%; animation: float-in 1s cubic-bezier(0.5, 0, 0.1, 1) 0.2s forwards;">A smart picture frame with avalanhce forecast information from the CAIC so you're always in the know when it comes to Colorado's backcountry</p>
         </div>
       </div>
     </section>
 
     <section class="construct" style="opacity: 0%; animation: float-in 1s cubic-bezier(0.5, 0, 0.1, 1) 0.6s forwards;">
-      <h1>Currently in the making</h1>
+      <h3>Currently in the making</h3>
       <p>More frequent updates will be on my snapchat story and possibly my instagram story<br><br>I'm planning to right some code to make the whole thing more usable in day-to-day use. The setup is still not the easiest but it's ok since I should at some point make a doc that explains all the steps<br><br>Update (Mar 4, 2025): I Finshed the main code! the project is in a usable state, not it's time to polish and make its use easier. I'll be creating the github repo soon</p>
+    </section>
+
+    <section class="details">
+      <div class="tech-stack">
+        <div class="img-description" style="padding-right: 2rem;">
+          <h3>The Build</h3>
+          <p>The main star of the project is the <b>Waveshare 7.5in monochrome e-ink display</b>. With the power of the <b>Rasperry Pi Zero W</b> the display comes to life with data from CAIC's avalanche foracst and Winter Park Resort's live weather on the mountain. A <b>3D printed case</b> brings all the components together into one compact package. </p>
+        </div>
+        <div class="img-container">
+          <video class="" id="myVideo" autoplay muted playsinline>
+            <source src="../Resources/Videos/AV_display_build.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </div>
+      </div>
+      <div>
+        <div class="img-container">
+          <img src="../Resources/Images/Projects/AV_display/AV_display_front.jpeg" alt="The front of the AV display">
+        </div>
+        <div class="img-description" style="padding-left: 2rem;">
+          <h3>How's it work?</h3>
+          <p>Every hour, the Rasperry Pi Zero W runs a python script to fetch the live information from the website. Once retrived, using the PIL python library the Pi Zero will render an image to display and refresh the e-ink display with the new data.</p>
+        </div>
     </section>
 
     <!-- Footer -->

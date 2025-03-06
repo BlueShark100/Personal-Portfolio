@@ -34,7 +34,6 @@
     align-items: center;
     justify-content: center;
     max-width: 1000px; /* Adjust based on your preference */
-    margin: auto;
     gap: 2rem; /* Space between text and image */
 }
 
@@ -94,6 +93,94 @@
     filter: blur(40px);
 }
 
+.construct {
+    margin-top: 5rem;
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+}
+
+.construct h3 {
+    font-family: 'Chakra Petch';
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.construct p {
+    font-family: Verdana, sans-serif;
+    font-weight: 500; 
+    font-size: 1.2rem;
+    color: var(--secondary-color); /* Secondary color for subtler text */
+    max-width: 600px; /* Limit width for better readability */
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+.details > div {
+    background-color: var(--glass-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(8px);
+    color: var(--text-color);
+    text-decoration: none;
+    display: flex;
+    flex-direction: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 0.5rem;
+}
+
+.details > div img {
+    width: 140%;
+    height: auto;
+    object-fit: cover;
+}
+
+.details > div video {
+    width: 140%;
+    height: auto;
+    object-fit: cover;
+}
+
+.img-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 16/12;
+}
+
+.details > div {
+    align-items: center;
+    vertical-align: middle;
+}
+
+
+
+.img-description h3 {
+    font-family: 'Chakra Petch';
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.img-description p {
+    font-family: Verdana, sans-serif;
+    font-weight: 500; 
+    font-size: 1.2rem;
+    color: var(--secondary-color); /* Secondary color for subtler text */
+    max-width: 600px; /* Limit width for better readability */
+}
+
 /* Adjust for mobile viewing too */
 @media (max-width: 1170px) {
 
@@ -114,6 +201,34 @@
 
     .hero-text {
         height: 400px;
+    }
+
+    .details > div {
+        flex-direction: column;
+    }
+
+    .details > div .img-description {
+        margin-bottom: 2rem;
+    }
+
+    .details > div video {
+        width: 140%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .img-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        overflow: hidden;
+        aspect-ratio: 16/12;
+    }
+
+    .details > div {
+        max-width: calc(600px + 3rem);
     }
 }
 
